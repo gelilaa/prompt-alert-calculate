@@ -2,21 +2,55 @@
 <html lang='en'>
 
 <head>
-  <meta charset='utf8'>
-  <title>prompt, alert, calculate</title>
+    <meta charset='utf8'>
+    <title>prompt, alert, calculate</title>
 
-  <!-- load the styles -->
+    <link rel="stylesheet" href="style.css">
 
-  <!-- load the shared data -->
+    <!-- load the shared data -->
+    <script src="./scripts/shared-variables.js"></script>
 
-  <!-- load the handler scripts -->
+    <!-- load the handler scripts -->
+    <script src='./scripts/handlers/add.js'></script>
+    <script src="./scripts/handlers/divide.js"></script>
+    <script src="./scripts/handlers/instructions.js"></script>
+    <script src="./scripts/handlers/last-result-display.js"></script>
+    <script src="./scripts/handlers/last-result-reset.js"></script>
+    <script src="./scripts/handlers/multiply.js"></script>
+    <script src="./scripts/handlers/subtract.js"></script>
 
-
-  <!-- Leave this here!  It renders the review buttons  -->
-  <script src='./review-buttons/init.js'></script>
+    <!-- Leave this here!  It renders the review buttons  -->
+    <script src='./review-buttons/init.js'></script>
 
 </head>
 
-<body></body>
+<body>
+    <div id="page-container">
+        <header>
+            <h1>HTML5, CSS, JavaScript prompt-alert-calculate</h1>
+        </header>
+
+        <main>
+            <div class="wrapper">
+                <div class="calc_body">
+
+                    <div class="action" id="mult" onclick="actionWithOperator(this)">*</div>
+                    <div class="action" id="divide" onclick="actionWithOperator(this)">/</div>
+                    <div class="action" id="minus" onclick="actionWithOperator(this)">-</div>
+                    <div class="action" id="add" onclick="actionWithOperator(this)">+</div>
+                    <div class="result" id="display" onclick="actionDisplay(this)">Display last result</div>
+                    <div class="result" id="cancel" onclick="actionCancel(this)">Cancel all</div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>HackYourFuture 2020 <span>|</span> Class 10-4 <span>|</span> <a href="https://github.com/gelilaa/prompt-alert-calculate">github</a></p>
+        </footer>
+
+    </div>
+
+</body>
 
 </html>
