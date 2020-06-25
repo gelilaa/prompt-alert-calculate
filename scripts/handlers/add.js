@@ -9,12 +9,18 @@ console.log('-- loading: add --');
  * @returns {number}
  */
 function add(x, y) {
-  if (typeof x !== 'number') { throw new TypeError('x'); }
-  if (typeof y !== 'number') { throw new TypeError('y'); }
+  if (typeof x !== 'number') {
+    throw new TypeError('x');
+  }
+  if (typeof y !== 'number') {
+    throw new TypeError('y');
+  }
 
-  const result = _;
+  const result = Number(x + y);
 
-  if (typeof result !== 'number') { throw new TypeError('result'); }
+  if (typeof result !== 'number') {
+    throw new TypeError('result');
+  }
   return result;
 }
 
@@ -83,9 +89,14 @@ function addHandler() {
   console.log('lastResult (before):', typeof lastResult, '\n', lastResult);
 
   // read a number from the user
+  const userInput = prompt(`Enter number to add it with ${lastResult}`);
+  if (userInput === null) {
+    return;
+  } //break out of the function early
 
   // add the user's number to the last result and reassign lastResult
-  _;
+  const result = +Number(userInput) + Number(lastResult);
+  lastResult = Number(result);
   console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
 
   alert(`the new result is: ${lastResult}`);
