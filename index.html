@@ -34,12 +34,12 @@
             <div class="wrapper">
                 <div class="calc_body">
 
-                    <div class="action" onclick="actionWithOperator(this)">*</div>
-                    <div class="action" onclick="actionWithOperator(this)">/</div>
-                    <div class="action" onclick="actionWithOperator(this)">-</div>
-                    <div class="action" onclick="actionWithOperator(this)">+</div>
-                    <div class="result" id="display" onclick="actionDisplay(this)">Display last result</div>
-                    <div class="result" id="cancel" onclick="actionCancel(this)">Cancel all</div>
+                    <div class="action" onclick="multiplyHandler()">*</div>
+                    <div class="action" onclick="divideHandler()">/</div>
+                    <div class="action" onclick="subtractHandler()">-</div>
+                    <div class="action" onclick="addHandler()">+</div>
+                    <div class="result" id="display" onclick="displayLastResultHandler()">Display last result</div>
+                    <div class="result" id="cancel" onclick="resetLastResultHandler()">Reset</div>
 
                 </div>
             </div>
