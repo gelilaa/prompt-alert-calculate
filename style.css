@@ -103,13 +103,13 @@ main {
 
 footer {
     background-color: #eee;
+    width: 100%;
     line-height: 4em;
     text-align: center;
     font-size: 0.75em;
     font-weight: normal;
     position: absolute;
     bottom: 0;
-    width: 100%;
 }
 
 span {
