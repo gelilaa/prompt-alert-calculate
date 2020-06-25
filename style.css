@@ -57,19 +57,29 @@ main {
 }
 
 .result,
-.action {
+.action,
+.instruction {
     height: 4em;
     line-height: 4em;
     border-radius: 4px;
     text-align: center;
 }
 
-.result {
+.result,
+.instruction {
     grid-column-start: 1;
     grid-column-end: span 4;
     background: #f49293;
     font-weight: normal;
     text-transform: uppercase;
+}
+
+.instruction {
+    background: #e3ee7f
+}
+
+.instruction:hover {
+    background: #eecd38;
 }
 
 #display {
