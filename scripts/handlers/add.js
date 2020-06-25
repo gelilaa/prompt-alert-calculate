@@ -90,12 +90,13 @@ function addHandler() {
 
   // read a number from the user
   const userInput = prompt(`Enter number to add it with ${lastResult}`);
+  let numberUser = Number(userInput);
   if (userInput === null) {
     return;
   } //break out of the function early
 
   // add the user's number to the last result and reassign lastResult
-  const result = +Number(userInput) + Number(lastResult);
+  const result = add(numberUser, lastResult);
   lastResult = Number(result);
   console.log('lastResult (after):', typeof lastResult, '\n', lastResult);
 
