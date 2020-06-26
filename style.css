@@ -75,11 +75,11 @@ main {
 }
 
 .instruction {
-    background: #e3ee7f
+    background: #f3d78b
 }
 
 .instruction:hover {
-    background: #eecd38;
+    background: #f1d65b;
 }
 
 #display {
